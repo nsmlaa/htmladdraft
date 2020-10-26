@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>984x322</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		#main_container {
+			width: 984px;
+			height: 322px;
+			background-image: url('soccerone.jpg');
+			background-color: white;
+			background-size: cover;
+			display: block;
+			position: relative;
+			overflow: hidden;
+			font-family: "helvetica";
+		}
+
+		@keyframes clicktokick {
+			0%{
+				opacity: 1;
+			}
+			100%{
+				opacity: 0;
+			}
+		}
+
+		@keyframes ballmove {
+			0% {
+			top: 84%;
+    		left: 55%;
+    		opacity: 1;
+    	
+    	
+			}
+			15% {
+			top: 78%;
+    		left: 60%;
+    		opacity: 1;
+    	
+    	
+			}
+			30% {
+	
+			top: 72%;
+    		left: 65%;
+    		opacity: 1;
+    	
+			}
+			45% {
+			width: 30px;
+			height: 30px;
+			top:65%;
+			left:70%;
+			opacity: 1;
+
+			}
+			60% {
+			width: 25px;
+			height: 25px;
+			top:60%;
+			left:75%;
+			opacity: 1;
+		
+			}
+			75% {
+			width: 23px;
+			height: 23px;
+			top:55%;
+			left:80%;
+			opacity: 1;
+
+			}
+			90% {
+			width: 21px;
+			height: 21px;
+			top:53%;
+			left:81%;
+			opacity: 1;
+
+			}
+			100% {
+			width: 20px;
+			height: 20px;
+			top:52%;
+			left:82%;
+			opacity: 0;
+		
+			}
+		}
+
+		@keyframes pl {
+			0% {
+				background-image: url('soccerone.jpg');
+			}
+			8% {
+				background-image: url('soccertwo.jpg');
+			}
+			12% {
+				background-image: url('soccerthree.jpg');
+			}
+			16% {
+				background-image: url('soccerfour.jpg');
+			}
+			20% {
+				background-image: url('soccerfive.jpg');
+			}
+			
+			30% {
+				background-image: url('goal2.jpg');
+
+			}
+			40% {
+				background-image: url('whitebg.jpg');
+			}
+			45% {
+				background-image: url('bgtwo.jpg');
+			}
+			50% {
+				background-image: url('allinone.jpg');
+			}
+			60% {
+				background-image: url('package.jpg');
+			}
+			65% {
+				background-image: url('details.jpg');
+			
+			}
+			80% {
+				background-image: url('details.jpg');
+			}
+			90% {
+				background-image: url('babiloslogo.jpg');
+			}
+			100% {
+				background-image: url('subscribe.jpg');
+			}
+		}
+
+
+		#ballonly {
+			width: 35px;
+			height: 35px;
+			background-image: url('ball.png');
+			background-size: cover;
+			position: absolute;
+			top: 84%;
+    		left: 55%;
+
+			
+		}
+
+
+
+#player {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	
+}
+
+#clickme {
+  color: white;
+  border: 2px solid white; 
+  width: 250px;
+  top: 30%;
+  left: 40%;
+  position: absolute;
+  padding: 32px 16px;
+  border-radius: 45px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+#clickme:hover {
+  color: white;
+  border: 2px solid white; 
+  width: 250px;
+  top: 30%;
+  left: 40%;
+  position: absolute;
+  padding: 32px 16px;
+  border-radius: 45px;
+  text-align: center;
+  font-size: 20px;
+  opacity: 1;
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/*#subscribenow {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+
+	<div id="subscribenow">
+			<img src="subscribe.jpg">
+			<a href="https://www.instagram.com/babilos.tv/">SUBSCIRBE NOW</a>
+
+}
+*/
+
+
+
+/*#player.play {
+	animation-name: pl;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+#ballonly.play {
+  animation-name: ballmove;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}*/
+
+#bgaud {
+	opacity: 0;
+}
+	</style>
+
+</head>
+<body>
+	<div id="main_container" onclick="blah()">
+		<div id="phaseone">
+			<div id="sone"></div>
+			<div id="stwo"></div>
+			<div id="sthree"></div>
+			<div id="sfour"></div>
+			<div id="sfive"></div>
+
+			
+
+		</div>
+			
+
+
+			<div id="player"></div>
+			<div id="ballonly"></div>
+
+			<div id="clickme">CLICK TO KICK</div>
+		</div>
+		
+
+		</div>
+	</div>
+
+	<audio id="bgaud" controls>
+	  <source src="soccer.ogg" type="audio/ogg">
+	  <source src="soccer.mp3" type="audio/mpeg">
+	</audio>
+</body>
+</html>
+<script type="text/javascript">
+	function blah() {
+		document.querySelector('#player').style.animationName = 'pl';
+		document.querySelector('#player').style.animationDuration = '19s';
+		document.querySelector('#player').style.animationIterationCount = '1';
+		document.querySelector('#player').style.animationFillMode = 'forwards';
+		document.querySelector('#player').style.animationTimingFunction = 'ease-out';
+
+
+		document.querySelector('#ballonly').style.animationName = 'ballmove';
+		document.querySelector('#ballonly').style.animationDuration = '3s';
+		document.querySelector('#ballonly').style.animationIterationCount = '1';
+		document.querySelector('#ballonly').style.animationFillMode = 'forwards';
+		document.querySelector('#ballonly').style.animationTimingFunction = 'linear';
+		document.querySelector('#ballonly').style.animationD = 'linear';
+
+
+		document.querySelector('#clickme').style.animationName = 'clicktokick';
+		document.querySelector('#clickme').style.animationDuration = '0.5s';
+		document.querySelector('#clickme').style.animationIterationCount = '1';
+		document.querySelector('#clickme').style.animationFillMode = 'forwards';
+		document.querySelector('#clickme').style.animationTimingFunction = 'linear';
+		document.querySelector('#clickme').style.animationD = 'linear';
+
+		var audio = document.getElementById("bgaud");
+		audio.play();
+	}
+</script>
